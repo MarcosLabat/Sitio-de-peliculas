@@ -1,0 +1,428 @@
+:root{
+	--logo: #e50914;
+	--width-contenedor: 90%;
+	--fondo: #000;
+	--letra-logo: 'Bebas Neue', cursive;
+	scroll-behavior: smooth;
+}
+
+img{
+	object-fit: cover;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+	background-color:var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	
+}
+
+header{
+	padding:25px 0;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, .70);
+
+}
+
+.contenedor{
+	width: var(--width-contenedor);
+	margin: auto;
+}
+
+header .contenedor{
+	font-size: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+	
+} 
+
+header .logo{
+	font-size: 2.5em;
+	font-family: var(--letra-logo);
+	color: var(--logo);
+	
+}
+
+header .item{
+	color: #f2f2f2;
+	font-size: 1.125em;
+	font-weight: 700;
+	padding: 0 15px;
+	
+}
+
+header .item:hover{
+	color:#aaa;
+	transition: .3s ease all;
+}
+
+/** Estilo de las Imagenes **/
+
+.baner{
+	width:100%;
+	height:100vh ;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+
+.slider{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+}
+
+
+.slideimg{
+	width: 100%;
+	height: 100vh;
+}
+
+
+.overlay{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, .50)0%, rgba(0, 0, 0, .50 )100%);
+	position: absolute;
+	top: 0;
+	color: #f3f3f3;
+}
+
+.overlay .contenedor{
+	width: 90%;
+	margin: 500px auto 0;
+}
+
+/** Estilo del texto y botones **/
+.serie{
+    font-family: var(--letra-logo);
+    color: var(--logo);
+	font-size: 1.875em;
+}
+
+.texto-dos{
+    font-size: 1.125em;
+    line-height: 1.875em;
+	max-width: 50%;
+}
+
+
+
+.botones, 
+.botones-dos{
+	width: 12.5em ;
+    height: 2.5em;
+    background: #fff;
+    text-align: center;
+    margin-top: 1em;
+    border:none; 
+    border-radius: 5px;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.botones a, 
+.botones-dos a{
+	color: #141414;
+    font-weight:700;
+    font-size: 1.25em;
+    padding: 0 15px;
+}
+
+.botones i, 
+.botones-dos i{
+	padding-bottom: 5px;
+   	font-size: 1.25em;
+}
+
+
+.botones:hover, 
+.botones-dos:hover{
+	background: rgba(255, 255, 255, .7);
+} 
+
+/** Pelixulas **/
+
+.grid-contenedor{
+	width: 90%;
+	margin: auto ;
+	padding: 20px 0;
+}
+
+.lista-peliculas, .lista-series{
+	display: grid;
+	grid-template-columns: repeat(5, minmax(100px, 1fr)); 
+	grid-template-rows: repeat(2, minmax(100px, auto));
+	grid-gap: 30px;
+	margin: 50px 0;
+}
+
+
+
+.grid-contenedor .lista-peliculas .images img, 
+.grid-contenedor .lista-series .images img{
+	border: 5px solid #fff;
+	max-width: 175px;
+	height: 300px;
+}
+
+
+li{
+	list-style: none;
+	color: #f2f2f2;
+}
+
+.Caracteristicas{
+
+	text-align: center;
+	font-size: 16px;
+	margin: 5px 0;
+}
+
+.titulo{
+	font-size: 1.125em;
+	padding: 5px 10px ;
+	margin: 5px 0;
+	color: #f2f2f2;
+
+}
+
+.genero{
+	font-size: .875em;
+	padding: 5px 10px;
+	margin: 5px 0;
+}
+
+.boton button{
+	border: none;
+	background-color: #1a1a1a;
+	color: var(--logo);
+	width: 150px;
+	height: 30px;
+	border-radius: 40px;
+	padding: 5px 10px;
+	margin: 5px 0;
+}
+.images{
+	background-color: #1a1a1a;
+	text-align: center;
+	max-width: 175px;
+	font-size: 16px;
+}
+
+.boton button:hover{
+	background-color: rgba(216, 216, 211, 0.102);
+}
+
+.boton button a{
+	color: var(--logo);
+}
+
+
+.titulo-seccion{
+	text-align: center;
+	color: #ffac41;
+	font-weight: 400;
+	font-size: 2.5rem;
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 920px){
+
+	header .contenedor{
+		flex-direction: column;
+	}
+
+	header .logo{
+		margin-bottom: 15px;
+	}
+
+	.baner{
+		height: 65vh;
+		margin-bottom: 25px;
+	}
+
+	.slideimg{
+		height: 65vh;
+	}
+
+	.overlay .contenedor{
+		margin: 330px auto 0;
+	}
+
+	.serie{
+		font-size: 1.25rem;
+	}
+
+	.texto-dos{
+		font-size: 16px;
+		line-height: 1.5625em;
+		max-width: 80%;
+	}
+
+.botones, 
+.botones-dos{
+	width: 9.375em;
+    height: 1.875em;
+    margin-top: .625em;
+	margin-right: 15px;
+ }
+
+.botones a, 
+.botones-dos a{
+    font-size: .9375rem;
+    padding: 0 10px;
+}
+
+.botones i, 
+.botones-dos i{
+   	font-size: .9375rem;
+}
+
+.lista-peliculas, .lista-series{
+	grid-template-columns: repeat(4, minmax(100px, 1fr)); 
+	grid-template-rows: repeat(2, minmax(100px, auto));
+	grid-gap: 20px;
+	margin: 15px 0;
+}
+
+.grid-contenedor .lista-peliculas .images img, 
+.grid-contenedor .lista-series .images img{
+	width: 150px;
+	height: 200px;
+}
+
+.images{
+	font-size: 14px;
+	width: 150px;
+}
+
+
+.titulo-seccion{
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+}
+
+@media screen and (max-width: 650px){
+	header .contenedor{
+		font-size: 14px;	
+	}
+
+	header .logo{
+		margin-bottom: 10px;
+	}
+
+	header .item{
+		color: #f2f2f2;
+		font-size: .875rem;
+		padding: 0 10px;
+	}
+
+	.baner{
+		height: 50vh;
+		margin-bottom: 15px;
+	}
+
+	.slideimg{
+		height: 50vh;
+	}
+
+	.overlay .contenedor{
+		margin: 200px auto 0;
+	}
+
+	.texto-dos{
+		font-size: 14px;
+		line-height: 1.5625em;
+		max-width: 100%;
+	}
+
+	.botones, 
+	.botones-dos{
+		width: 8.125rem;
+    	height: 1.5625em;
+ }
+
+	.botones a, 
+	.botones-dos a{
+    	font-size: .875rem;
+    	padding: 0 10px;
+}
+
+	.botones i, 
+	.botones-dos i{
+   		font-size: 0.8125rem;
+}
+
+.lista-peliculas, .lista-series{
+	grid-template-columns: repeat(3, minmax(100px, 1fr));
+	margin: 15px 0;
+}
+
+.grid-contenedor .lista-peliculas .images img, 
+.grid-contenedor .lista-series .images img{
+	width: 150px;
+	height: 250px;
+}
+
+.images{
+	font-size: 14px;
+	width: 150px;
+}
+}
+
+@media screen and (max-width: 490px){
+	.baner{
+		height: 45vh;
+		margin-bottom: 5px;
+	}
+
+	.slideimg{
+		height: 45vh;
+	}
+
+	.overlay .contenedor{
+		margin: 150px auto 0;
+	}
+
+	.serie{
+		font-size: 1.125rem;
+	}
+
+	.texto-dos{
+		font-size: 12px;
+		width: 90%;
+	}
+
+
+	.botones a, 
+	.botones-dos a{
+    	font-size: .75rem;
+    	padding: 0 8px;
+}
+
+.botones i, 
+.botones-dos i{
+	   font-size: .75rem;
+}
+
+.titulo-seccion{
+	font-size: 25px;
+}
+
+.lista-peliculas, .lista-series{
+	grid-template-columns: repeat(2, minmax(100px, 1fr));
+}
+
+}
